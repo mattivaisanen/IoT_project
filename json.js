@@ -1,4 +1,4 @@
-const apiURL = "http://webapi19sa-1.course.tamk.cloud/v1/weather";
+const apiURL = "https://webapi19sa-1.course.tamk.cloud/v1/weather";
 let timespan = 20;
 let urlpath = "temperature";
 let label = "Temperature";
