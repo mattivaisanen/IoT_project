@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Miau sääsetti</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+  <a class="navbar-brand" href="#">Weather 2.0</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+      <li class="nav-item">
+      <a class="nav-link" href="data.html">Data</a>
+    </ul>
+  </div>
+</nav>
+
+<h3 id="direction"></h3>
+<article class="d-flex justify-content-center container">
+  <section class=" m-2 p-3 justify-content-center lead container shadow rounded col-lg-4 col-md-4 ">
+    <h2>Current Weather</h2>
+    <div id="current_temp">Haloo</div>
+    <div id="current_windspeed">Haloo</div>
+    <div id="current_winddirection">Haloo</div>
+    <div id="current_rain">Haloo</div>
+  </section>
+  <section class=" m-2 p-3 justify-content-center lead container shadow rounded col-lg-8 col-md-8">
+    <section><label for="timespan">Timespan:</label>
+      <select name="timespan" id="timespan">
+        <option value="now">Now</option>
+        <option value="24hours">24 hours</option>
+        <option value="72hours">72 hours</option>
+        <option value="1week">1 week</option>
+        <option value="1month">1 month</option>
+      </select>
+      
+      <label for="sensor">Sensor:</label>
+      <select name="sensor" id="sensor">
+        <option value="temperature">Temperature</option>
+        <option value="windspeed">Windspeed</option>
+        <option value="winddirection">Wind Direction</option>
+        <option value="rainamount">Rain Amount</option>
+        <option value="humidity_in">Humidity Inside</option>
+        <option value="humidity_out">Humidity outside</option>
+        <option value="light">Light level</option>
+      </select>
+    </section>
+    <section class="box text-center">
+      <section id="loader">
+        <button class="btn mt-4 btn-primary " type="button" disabled>
+          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+          Loading... 
+        </button>
+      </section>
+      <div id="error" class="mt-4"></div>
+      <canvas id="chart"></canvas>
+    </section>
+    <section class="">
+      <div id="mean"></div>
+      <div id="median"></div>
+      <div id="mode"></div>
+      <div id="range"></div>
+      <div id="deviation"></div>
+    </section>
+  </section>
+</article>
+  
+<script defer src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+</body>
+</html>
