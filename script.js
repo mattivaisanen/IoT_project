@@ -166,11 +166,15 @@ function calulateMath(data){
   const standardDeviation = Math.sqrt(data.reduce((acc, { data }) => acc + (parseFloat(data) - mean) ** 2, 0) / (length - 1));
 
   document.getElementById("mean").innerText = `Mean: ${mean.toFixed(1)}`;
-  con
+  console.log(mean);
   document.getElementById("mode").innerText = `Mode: ${mode}`;
+  console.log(mode);
   document.getElementById("median").innerText = `Median: ${median}`;
+  console.log(median);
   document.getElementById("range").innerText = `Range: ${(Math.max(...data)-Math.min(...data)).toFixed(1)}`;
+  console.log(Math.max(...data)-Math.min(...data));
   document.getElementById("deviation").innerText = `Deviation: ${standardDeviation}`;
+  console.log(standardDeviation);
 }
 
 getWeather();
